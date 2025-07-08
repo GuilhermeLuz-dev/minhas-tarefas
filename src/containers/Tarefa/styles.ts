@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import variaveis from '../../styles/variaveis'
 
 import * as enums from '../../utils/enums/Tarefas'
+import { Botao } from '../../styles/styles'
 
 type TagProps = {
   prioridade?: enums.prioridade
@@ -27,12 +28,17 @@ export const Card = styled.div`
   background-color: #fcfcfc;
   box-shadow: 0 4px 4px rgb(0, 0, 0, 0.24);
   margin-bottom: 32px;
+  label {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+  }
 `
 
 export const Titulo = styled.h3`
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-left: 8px;
 `
 
 export const Tag = styled.span<TagProps>`
@@ -64,21 +70,6 @@ export const BarraDeAcoes = styled.div`
   padding-top: 16px;
 `
 
-export const Botao = styled.button`
-  padding: 6px 12px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #fff;
-  border-radius: 8px;
-  background-color: #2f3640;
-  border: none;
-  cursor: pointer;
-  margin-right: 8px;
-`
-
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${variaveis.verde};
-`
 export const BotaoCancelarRemover = styled(Botao)`
   background-color: ${variaveis.vermelho};
 `
